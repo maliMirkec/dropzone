@@ -387,7 +387,7 @@ class Dropzone extends Emitter
 
     # Called whenever a file is removed.
     removedfile: (file) ->
-      file.previewElement?.parentNode.removeChild file.previewElement if file.previewElement
+      file.previewElement?.parentNode.removeChild file.previewElement if file.previewElement and parentNode
       @_updateMaxFilesReachedClass()
 
     # Called when a thumbnail has been generated
